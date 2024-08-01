@@ -34,22 +34,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-### NextJS Basics: Loading massage..
-
----
-
-_This repository is a practice of the first NextJS topic: Loading._ All source files are placed in the 'app' folder.
-
-Here if somehow the internet is slow or the content is too big to load, you just have to put a loading massage till the content has come.
-All you have to do do, just at the rout folder as we did earlier as layput/page.jsx we just have to create a file named 'loading'
-just there write your loading massage and then save it. nextJS will automatically render the loading massage to the children sagement
-
-```
-function itemsloading() {
-  return <div> Homapage loading....</div>;
-}
-
-export default itemsloading;
-
-```
