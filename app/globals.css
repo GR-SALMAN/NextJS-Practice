@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&family=Orbitron:wght@400&display=swap");
+
+body {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+li {
+  font-size: large;
+}
+
+.rootHeader {
+  width: 450px;
+  border-bottom: 1px solid black;
+}
+
+.rootHeader li {
+  padding: 5px;
+}
+
+.itemSidebar {
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
