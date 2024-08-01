@@ -65,5 +65,4 @@ When the project is built and ready to run, it searches for a page.js or page.js
 To include navigation, simply pass the children prop as a parameter to the layout component and then render the children within the component.
 
 For routing, create folders with specific names. If a folder contains a page.js file, Next.js automatically creates a route with the same name. You can use links like '/(folder name)' to navigate to these pages. If the folder also includes a layout.jsx file, it will be used as the layout for that route.
->>>>>>> main
 
