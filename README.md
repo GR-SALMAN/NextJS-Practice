@@ -87,3 +87,9 @@ export default function Error({ error, reset }) {
 ##### Everytime any code error occus, its gonna show up!
 
 If you look closely, there is a mode at the top called "Use Client" that means the error as that are gonna detected is based on the client side error
+
+Key Points:
+- The 'use client' directive is essential for error components.
+- The error prop provides details about the error.
+- The reset function can be used to attempt to recover from the error.
+- It's recommended to log errors to an error reporting service for monitoring and debugging.
