@@ -35,34 +35,55 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 <<<<<<< Routing-navigation
-### NextJS Basics: Loading massage..
+
+### NextJS Basics: Error Page
 
 ---
 
-_This repository is a practice of the first NextJS topic: Loading._ All source files are placed in the 'app' folder.
+_This repository is a practice of the first NextJS topic: Error page._ All source files are placed in the 'app' folder.
+So, if there is been somekind of error on your code for some reason, that can occur error:
+Like you can make yourself and error:
 
-Here if somehow the internet is slow or the content is too big to load, you just have to put a loading massage till the content has come.
-All you have to do do, just at the rout folder as we did earlier as layput/page.jsx we just have to create a file named 'loading'
-just there write your loading massage and then save it. nextJS will automatically render the loading massage to the children sagement
+- Just inside the function use this:
 
 ```
-function itemsloading() {
-  return <div> Homapage loading....</div>;
+throw new Error("Whats wrong with you?");
+```
+
+and the the entire page gonna occur and error.
+
+#### So, the error has been generated, so what can you do for that?
+
+Just simply make a file names `error.jsx` and paste this JS code inside:
+
+```
+'use client' // Error components must be Client Components
+
+import { useEffect } from 'react'
+
+export default function Error({ error, reset }) {
+  useEffect(() => {
+    // Log the error to an error reporting service
+    console.error(error)
+  }, [error])
+
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button
+        onClick={
+          // Attempt to recover by trying to re-render the segment
+          () => reset()
+        }
+      >
+        Try again
+      </button>
+    </div>
+  )
 }
-
-export default itemsloading;
-
 ```
 
-### NextJS Basics: Routing and Navigation
---------------------------------
-*This repository is a practice of the first NextJS topic: Routing and Navigation.* All source files are placed in the 'app' folder.
+##### Everytime any code error occus, its gonna show up!
 
-When the project is built and ready to run, it searches for a page.js or page.jsx file in each folder, similar to how index.html works. This file renders the front-side of the page. For navigation, a layout.jsx file is used. Pages are rendered within the layout, allowing for consistent navigation across the application.
-
-To include navigation, simply pass the children prop as a parameter to the layout component and then render the children within the component.
-
-For routing, create folders with specific names. If a folder contains a page.js file, Next.js automatically creates a route with the same name. You can use links like '/(folder name)' to navigate to these pages. If the folder also includes a layout.jsx file, it will be used as the layout for that route.
-
+If you look closely, there is a mode at the top called "Use Client" that means the error as that are gonna detected is based on the client side error
