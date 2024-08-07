@@ -13,6 +13,7 @@ const items = [
 ];
 
 function itemsPage() {
+  throw new Error("Whats wrong with you?");
   return (
     <ol>
       {items.map((el) => (
